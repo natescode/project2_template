@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import userRoutes from './routes/api/user';
+import userRoutes from './routes/api/user/user';
 import * as swagger from './swagger';
 
 const app: express.Express = express();
