@@ -1,19 +1,19 @@
 import express, { Application } from 'express';
-import userRoutes from './routes/api/user/user';
+import routes from './routes/index.js'
 import * as swagger from './swagger';
 
 const app: express.Express = express();
 
-// Middleware to parse incoming requests with JSON payloads
+// Middleware to parse JSON from request body
 app.use(express.json());
 
 // Routes
-app.use('/users', userRoutes);
+app.use('/', routes);
 
 // Setup Swagger documentation
 swagger.setupSwagger(app);
 
-// Start the server
+// Start the express server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
