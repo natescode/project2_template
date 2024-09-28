@@ -1,5 +1,5 @@
 import express, { Application } from 'express';
-import routes from './routes/index.js'
+import routes from './routes/api/index.js'
 import * as swagger from './swagger';
 
 const app: express.Express = express();
@@ -8,7 +8,7 @@ const app: express.Express = express();
 app.use(express.json());
 
 // Routes
-app.use('/', routes);
+app.use('/api', routes);
 
 // Setup Swagger documentation
 swagger.setupSwagger(app);

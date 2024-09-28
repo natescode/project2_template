@@ -4,7 +4,7 @@ const router = Router();
 
 /**
  * @swagger
- * /users:
+ * /api/user:
  *   get:
  *     summary: Get all users
  *     responses:
