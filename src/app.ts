@@ -1,6 +1,7 @@
 import express, { Application } from 'express';
 import routes from './routes/index.js'
 import * as swagger from './swagger';
+import { UserModel } from './models/usermodel.js';
 
 const app: express.Express = express();
 
@@ -12,6 +13,9 @@ app.use('/', routes);
 
 // Setup Swagger documentation
 swagger.setupSwagger(app);
+
+const me = new UserModel('natescode', 'password', true)
+console.log(me)
 
 // Start the express server
 const PORT = process.env.PORT || 3000;

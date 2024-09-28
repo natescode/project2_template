@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build && node ./dist/app.js",
+    "start:bun": "bun run src/app.ts",
+    "build:docs": "npx typedoc src/**/*.ts",
+    "start:docs": "npx serve docs"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +22,7 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
     "ts-node": "^10.9.2",
+    "typedoc": "^0.26.7",
     "typescript": "^5.6.2"
   }
 }
