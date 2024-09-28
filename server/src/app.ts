@@ -1,6 +1,6 @@
 import express, { Application } from 'express';
 import routes from './routes/index.js'
-import * as swagger from './swagger';
+import * as swagger from './swagger.js';
 import { UserModel } from './models/usermodel.js';
 
 const app: express.Express = express();
