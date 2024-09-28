@@ -8,6 +8,9 @@ const app: express.Express = express();
 // Middleware to parse JSON from request body
 app.use(express.json());
 
+// Middleware to server docs pages
+app.use('/docs',express.static('./docs'))
+
 // Routes
 app.use('/', routes);
 

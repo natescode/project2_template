@@ -6,12 +6,20 @@ This is a template for the bootcamp's group project 2.
 
 ### Swagger
 
-Swagger documents all the APIs and allows users to test them in the browser
+Swagger documents all the APIs and allows users to test them in the browser.
+
+To see the swagger docs: `npm run start`
+
+Navigate to [Swagger docs](http://localhost:3000/swagger)
+
 
 ### Typedoc
 
-Typedoc generates a site that documents all the typescript types for the project. Located in `/docs`
+Typedoc generates a site that documents all the typescript types for the project. Located in `/docs`.
 
+To see the type docs: `npm run start`
+
+Navigate to [type docs](http://localhost:3000/docs)
 
 ### Jest
 
@@ -30,7 +38,3 @@ verify that new code doesn't break existing functionality (regression testing).
 `npm run start:docs`
 
 ## Build and show Swagger API docs
-
-`npm run start`
-
-got to [Swagger docs](http://localhost:3000/swagger)
