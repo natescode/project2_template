@@ -4,10 +4,11 @@ import { User } from '../db/models/User.js';
 // GET /Users
 export const getAllUsers = async (_req: Request, res: Response) => {
   try {
-    const users = await User.findAll({
+    const user = await User.findAll({
       attributes: { exclude: ['password'] }
     });
-    res.json(users);
+    console.log(`user ${JSON.stringify(user)}`)
+    res.json(user);
   } catch (error: any) {
     res.status(500).json({ message: error.message });
   }

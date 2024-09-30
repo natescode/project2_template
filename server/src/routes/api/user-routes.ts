@@ -9,19 +9,59 @@ import {
 
 const router = express.Router();
 
-// GET /users - Get all users
+/**
+ * @swagger
+ * /api/user:
+ *   get:
+ *     summary: Get all users
+ *     responses:
+ *       200:
+ *         description: Success
+ */
 router.get('/', getAllUsers);
 
-// GET /users/:id - Get a user by id
-router.get('/:id', getUserById);
+// /**
+//  * @swagger
+//  * /api/user/{id}
+//  *   get:
+//  *     summary: Get user by id
+//  *     responses:
+//  *       200:
+//  *         description: Success
+//  */
+// router.get('/:id', getUserById);
 
-// POST /users - Create a new user
-router.post('/', createUser);
+// /**
+//  * @swagger
+//  * /api/user
+//  *   post:
+//  *     summary: Create a new user
+//  *     responses:
+//  *       200:
+//  *         description: Success
+//  */
+// router.post('/', createUser);
 
-// PUT /users/:id - Update a user by id
-router.put('/:id', updateUser);
+// /**
+//  * @swagger
+//  * /api/user/{id}
+//  *   put:
+//  *     summary: update a user by id
+//  *     responses:
+//  *       200:
+//  *         description: Success
+//  */
+// router.put('/:id', updateUser);
 
-// DELETE /users/:id - Delete a user by id
-router.delete('/:id', deleteUser);
+// /**
+//  * @swagger
+//  * /api/user/{id}
+//  *   delete:
+//  *     summary: delete a user by id
+//  *     responses:
+//  *       200:
+//  *         description: Success
+//  */
+// router.delete('/:id', deleteUser);
 
 export { router as userRouter };

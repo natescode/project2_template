@@ -22,7 +22,7 @@ app.use('/docs', express.static('./docs'))
 app.use(express.json());
 
 // Routes
-app.use('/', routes);
+app.use(routes);
 
 // Setup Swagger documentation
 swagger.setupSwagger(app);
@@ -34,9 +34,9 @@ swagger.setupSwagger(app);
 connection().then((sequelize) => {
   sequelize.sync({ force: forceDatabaseRefresh }).then(() => {
     app.listen(PORT, () => {
-      console.log(`Server is running on http://localhost:${PORT}`);
-      console.log(`Swagger docs available at http://localhost:${PORT}/swagger`);
-      console.log(`Type docs available at http://localhost:${PORT}/docs`);
+    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Swagger docs available at http://localhost:${PORT}/swagger`);
+    console.log(`Type docs available at http://localhost:${PORT}/docs`);
     });
   });
 })
