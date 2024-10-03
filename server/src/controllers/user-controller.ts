@@ -1,7 +1,23 @@
 import { Request, Response } from 'express';
 import { User } from '../db/models/User.js';
 
-// GET /Users
+/**
+ * @swagger
+ * /Users:
+ *   get:
+ *     summary: Retrieve all users
+ *     responses:
+ *       200:
+ *         description: A list of users
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/User'
+ *       500:
+ *         description: Server error
+ */
 export const getAllUsers = async (_req: Request, res: Response) => {
   try {
     const users = await User.findAll({
