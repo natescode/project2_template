@@ -11,7 +11,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/user:
+ * /api/users:
  *   get:
  *     summary: Get all users
  *     responses:

@@ -33,7 +33,7 @@ async function configSequelize(): Promise<Sequelize> {
 }
 
 async function setupDBConnection(): Promise<Sequelize> {
-    let sequelize: Sequelize | null = null
+    let sequelize: Sequelize 
 
     await client.connect()
     // create DATABASE
